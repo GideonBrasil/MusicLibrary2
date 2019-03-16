@@ -4,8 +4,8 @@ let Library = function (name, creator) {
     this.playlists = [];
 }
 
-Library.prototype.addPlaylist = function (listObject) {
-    this.playlists.push(listObject);
+Library.prototype.addPlaylist = function (playlistObject) {
+    this.playlists.push(playlistObject);
 };
 
 let Playlist = function (name) {
@@ -13,7 +13,9 @@ let Playlist = function (name) {
     this.tracks = [];
 }
 
-Playlist.prototype.overallRating
+Playlist.prototype.addTrack = function (trackObject) {
+    this.tracks.push(trackObject);
+};
 
 let Track = function (title, rating, length) {
     this.title = title;
