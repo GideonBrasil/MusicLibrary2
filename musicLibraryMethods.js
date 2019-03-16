@@ -30,7 +30,7 @@ Playlist.prototype.totalDuration = function () {
     this.tracks.forEach(track => {
         totalDuration += track.length;
     });
-    return totalDuration / this.tracks.length;
+    return totalDuration;
 };
 
 let Track = function (title, rating, length) {
@@ -62,3 +62,6 @@ dt.addTrack(dtTrack1);
 dt.addTrack(dtTrack2);
 dt.addTrack(dtTrack3);
 console.log('tracks in Dream Theater playlist: ', dt);
+
+console.log('Total duration of Trivium Ascendancy playlist is ', Math.round(trivium.totalDuration() * 100) / 100, 'minutes');
+console.log('The rating for Trivium Ascendancy is ', Math.round(trivium.overallRating() * 100) / 100);
