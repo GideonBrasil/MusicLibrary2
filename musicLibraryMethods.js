@@ -17,6 +17,16 @@ Playlist.prototype.addTrack = function (trackObject) {
     this.tracks.push(trackObject);
 };
 
+Playlist.prototype.overallRating = function () {
+    let rating = 0;
+    this.tracks.forEach(track => {
+        rating += track.rating;
+    });
+    return rating / this.tracks.length
+}
+
+Playlist.prototype.totalDuration = function ()
+
 let Track = function (title, rating, length) {
     this.title = title;
     this.rating = rating;
