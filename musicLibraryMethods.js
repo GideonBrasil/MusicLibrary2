@@ -22,10 +22,16 @@ Playlist.prototype.overallRating = function () {
     this.tracks.forEach(track => {
         rating += track.rating;
     });
-    return rating / this.tracks.length
+    return rating / this.tracks.length;
 }
 
-Playlist.prototype.totalDuration = function ()
+Playlist.prototype.totalDuration = function () {
+    let totalDuration = 0;
+    this.tracks.forEach(track => {
+        totalDuration += track.length;
+    });
+    return totalDuration / this.tracks.length;
+};
 
 let Track = function (title, rating, length) {
     this.title = title;
